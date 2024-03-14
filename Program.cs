@@ -19,10 +19,6 @@ class Program
     static async Task Main(string[] args)
     {
         SettingsSetUp();
-        /*
-        
-        */
-        
     }
 
     // not a fan of using string separator, but new line character is a string
@@ -73,13 +69,24 @@ class Program
     static void UserSetUp()
     {
         // need error handling
-
+        string presettings = "";
+        
         Console.WriteLine("Enter your API key: ");
         apiKey = Console.ReadLine();
+        presettings = presettings + apiKey + Environment.NewLine;
+        
         Console.WriteLine("Enter your latitude and longitude (lat,lon): ");
-        Parser(Console.ReadLine(), ",");
+        string[] coords = Parser(Console.ReadLine(), ",");
+        lat = coords[0];
+        lon = coords[1];
+        presettings = presettings + lat + Environment.NewLine;
+        presettings = presettings + lon + Environment.NewLine;
+        
         Console.WriteLine("Imperial or metric?: ");
         UnitHandler(Console.ReadLine());
+        presettings = presettings + units + Environment.NewLine;
+
+        File.WriteAllText("settings.txt", presettings);
     }
 }
 /*

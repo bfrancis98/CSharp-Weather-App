@@ -9,11 +9,11 @@ User flow
 [] Display weather/call weather api
 
 Dev stuff
-[] Function to create file
-    [] Check if file exists before creating
+[x] Function to create file
+    [x] Check if file exists before creating
+[] validate settings info before use
 [] if file exists, do not run through set up. go straight to api call
 [] error handling for incorrect formats
-[] validate settings info before use?
 
 Future improvements
 [] give a user a way to edit settings

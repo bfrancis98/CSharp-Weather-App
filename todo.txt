@@ -15,8 +15,15 @@ Dev stuff
 [] error handling for incorrect formats
 [] validate settings info before use?
 
+Future improvements
+[] give a user a way to edit settings
+[] 
+
 Notes:
 - Does everything need to be static?
 - Why use async with main?
 - This seems a lot like functional programming
 - Should any of this be split up into different files?
+- Should async be used whenever an api is called?
+- Environment.NewLine is clutch. Good for cross platform.
+- New line character is a string wtf

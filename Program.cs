@@ -60,7 +60,10 @@ class Program
         }  
         else 
         {
-            File.Create("settings.txt");
+            FileStream fs = File.Create("settings.txt");
+            fs.Close();
+            
+            Console.WriteLine("No settings found!");
             UserSetUp();
         }
     }

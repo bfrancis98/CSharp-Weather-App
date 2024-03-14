@@ -1,0 +1,22 @@
+MVP
+User flow
+[x] Ask for api key
+    [] store api key in file
+[x] Ask for location
+    [] store location in file
+[x] Ask for units
+    [] store location in file
+[] Display weather/call weather api
+
+Dev stuff
+[] Function to create file
+    [] Check if file exists before creating
+[] if file exists, do not run through set up. go straight to api call
+[] error handling for incorrect formats
+[] validate settings info before use?
+
+Notes:
+- Does everything need to be static?
+- Why use async with main?
+- This seems a lot like functional programming
+- Should any of this be split up into different files?

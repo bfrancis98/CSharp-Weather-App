@@ -1,0 +1,15 @@
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\bin\Debug\net8.0\CSharp-Weather-App.exe
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\bin\Debug\net8.0\CSharp-Weather-App.deps.json
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\bin\Debug\net8.0\CSharp-Weather-App.runtimeconfig.json
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\bin\Debug\net8.0\CSharp-Weather-App.dll
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\bin\Debug\net8.0\CSharp-Weather-App.pdb
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\obj\Debug\net8.0\CSharp-Weather-App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\obj\Debug\net8.0\CSharp-Weather-App.AssemblyInfoInputs.cache
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\obj\Debug\net8.0\CSharp-Weather-App.AssemblyInfo.cs
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\obj\Debug\net8.0\CSharp-Weather-App.csproj.CoreCompileInputs.cache
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\obj\Debug\net8.0\CSharp-Weather-App.sourcelink.json
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\obj\Debug\net8.0\CSharp-Weather-App.dll
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\obj\Debug\net8.0\refint\CSharp-Weather-App.dll
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\obj\Debug\net8.0\CSharp-Weather-App.pdb
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\obj\Debug\net8.0\CSharp-Weather-App.genruntimeconfig.cache
+C:\Users\Howligan\Documents\GitHub\CSharp-Weather-App\obj\Debug\net8.0\ref\CSharp-Weather-App.dll

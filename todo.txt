@@ -1,11 +1,15 @@
 MVP
 User flow
+[] Check for settings
+    [] validate api key
+    [] validate lat lon
+    [] validate units
 [x] Ask for api key
-    [] store api key in file
+    [x] store api key in file
 [x] Ask for location
-    [] store location in file
+    [x] store location in file
 [x] Ask for units
-    [] store location in file
+    [x] store location in file
 [] Display weather/call weather api
 
 Dev stuff
@@ -14,6 +18,7 @@ Dev stuff
 [] validate settings info before use
 [] if file exists, do not run through set up. go straight to api call
 [] error handling for incorrect formats
+    [] if apikey invalid, prompt user to change apikey
 
 Future improvements
 [] give a user a way to edit settings
@@ -27,3 +32,5 @@ Notes:
 - Should async be used whenever an api is called?
 - Environment.NewLine is clutch. Good for cross platform.
 - New line character is a string wtf
+- Is it better to make a function to validate each variable or just one do it all function?
+    - Since the parameters for validating are all different, they should be in different functions imo.

@@ -11,7 +11,7 @@ namespace CSharp_Weather_App;
 class Program
 {
     static string apiKey = "";
-    static string settingsPath = "";
+    static string settingsPath = "settings.txt";
     static readonly HttpClient client = new HttpClient();
     static string lat = "";
     static string lon = "";
@@ -23,7 +23,7 @@ class Program
         SettingsSetUp();
         if(areSettingsValid)
         {
-            GetWeatherData();
+            await GetWeatherData();
         }
 
     }
@@ -38,12 +38,12 @@ class Program
 
     static void SettingsSetUp()
     {
-        if (File.Exists("settings.txt"))
+        if (File.Exists(settingsPath))
         {
             // prob want to check if there is valid data in the settings
             // load variables here
-            Console.WriteLine("Settings file found!");
-            string settings = File.ReadAllText("settings.txt");
+            Console.WriteLine("Settings file found! (" + settingsPath + ")");
+            string settings = File.ReadAllText(settingsPath);
             string[] workingSettings = Parser(settings, Environment.NewLine);
 
             ValidateApiKey(workingSettings[0]);
@@ -52,13 +52,14 @@ class Program
             ValidateUnits(workingSettings[3]);
 
             SaveSettings();
+            areSettingsValid = true;
         }  
         else 
         {
-            FileStream fs = File.Create("settings.txt");
+            FileStream fs = File.Create(settingsPath);
             fs.Close();
             
-            Console.WriteLine("No settings found!");
+            Console.WriteLine("No settings found! (" + settingsPath + ")");
             UserSetUp();
         }
     }
@@ -83,15 +84,16 @@ class Program
         SaveSettings();
     }
 
-    static async void GetWeatherData()
+    static async Task GetWeatherData()
     {
         try
         {
-            string apiUrl = "https://api.openweathermap.org/data/3.0/onecall?lat="+ lat + "&lon="+ lon + "&appid=" + apiKey;
+            string apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat="+ lat + "&lon="+ lon + "&appid=" + apiKey + "&units=" + units;
             HttpResponseMessage response = await client.GetAsync(apiUrl);
 
             response.EnsureSuccessStatusCode();
             string responseContent = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(responseContent);
         }
         catch (HttpRequestException e)
         {
@@ -102,7 +104,7 @@ class Program
 
     static bool ValidateApiKey(string value)
     {
-        if (value.Length == 32 && value.All(char.IsLower))
+        if (value.Length == 32)
         {
             apiKey = value;
             return true;
@@ -110,7 +112,7 @@ class Program
         else 
         {
             Console.WriteLine("Invalid API Key. Please enter API Key: ");
-            ValidateApiKey(Console.ReadLine());
+            
         }
 
         return false;
@@ -176,7 +178,7 @@ class Program
 
     static void SaveSettings()
     {
-        if (File.Exists("settings.txt"))
+        if (File.Exists(settingsPath))
         {
             string workingString = 
             apiKey + Environment.NewLine +
@@ -184,24 +186,7 @@ class Program
             lon + Environment.NewLine +
             units + Environment.NewLine;
 
-            File.WriteAllText("settings.txt", workingString);
+            File.WriteAllText(settingsPath, workingString);
         }
     }
 }
-/*
-api key must be 32 characters
-api key must be all lower case
-
-lat must be between -90 and 90
-lon must be between -180 and 180
-
----
-check for settings
-if settings found
-validate api
-if true: save
-if false: prompt user to enter new api key
-validate api
-
-
-*/

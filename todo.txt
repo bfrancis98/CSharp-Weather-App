@@ -1,28 +1,28 @@
 MVP
 User flow
-[] Check for settings
-    [] validate api key
-    [] validate lat lon
-    [] validate units
+[x] Check for settings
+    [x] validate api key
+    []x validate lat lon
+    [x] validate units
 [x] Ask for api key
     [x] store api key in file
 [x] Ask for location
     [x] store location in file
 [x] Ask for units
     [x] store location in file
-[] Display weather/call weather api
+[x] Display weather/call weather api
 
 Dev stuff
 [x] Function to create file
     [x] Check if file exists before creating
-[] validate settings info before use
-[] if file exists, do not run through set up. go straight to api call
-[] error handling for incorrect formats
-    [] if apikey invalid, prompt user to change apikey
+[x] validate settings info before use
+[x] if file exists, do not run through set up. go straight to api call
+[x] error handling for incorrect formats
+    [x] if apikey invalid, prompt user to change apikey
 
 Future improvements
 [] give a user a way to edit settings
-[] 
+[] format results from api
 
 Notes:
 - Does everything need to be static?
